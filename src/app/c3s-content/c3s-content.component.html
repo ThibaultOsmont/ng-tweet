@@ -1,0 +1,7 @@
+<main class="container">
+  <span class="c3s-title"></span>
+  <input type="text" [(ngModel)]="inputSearch">
+  <div class="c3s-content row">
+    <c3s-card *ngFor="let card of cards | cardThematique:inputSearch" class="col-sm-4" [card]="card" (cardClick)="doCb($event)"></c3s-card>
+  </div>
+</main>

@@ -1,0 +1,10 @@
+<div class="panel panel-default" (click)="doClick()">
+  <img src="{{card?.imgsrc}}" class="img-responsive">
+  <div class="panel-body">
+    <p class='lead'>{{card?.title | cardUppercase}}</p>
+    <p>{{card?.legend}}</p>
+    <p>
+      {{card?.description}}
+    </p>
+  </div>
+</div>

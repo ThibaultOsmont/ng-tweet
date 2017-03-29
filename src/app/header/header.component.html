@@ -1,0 +1,35 @@
+<div id="header">
+  <p class="text-right">
+    <button type="button" class="btn btn-default" [ngClass]="{active: inscription}" (click)="inscription = !inscription">Inscription</button>
+    <button type="button" class="btn btn-default" [class.active]="! inscription" (click)="inscription = !inscription">Connection</button>
+  </p>
+  <h1 class="text-center">{{title}}</h1>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <a class="navbar-brand" href="#">{{title}}</a>
+  <ul class="nav navbar-nav">
+    <li class="active">
+      <a href="#">Home</a>
+    </li>
+    <li>
+      <a href="#" (click)="toggleSearchMode()">
+        <span class="glyphicon glyphicon-search"></span>
+      </a>
+    </li>
+    <ng-container *ngIf="!searchMode">
+      <li *ngFor="let metier of metiers">
+        <a href="#">
+          <c3s-item [item]="metier"></c3s-item>
+        </a>
+      </li>
+    </ng-container>
+    <li *ngIf="searchMode" class="navbar-form-search">
+
+        <input type="text">
+        <button type="submit" class="btn btn-default">Submit</button>
+
+    </li>
+  </ul>
+</nav>
+{{inputSearch}}
