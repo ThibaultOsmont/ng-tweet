@@ -1,4 +1,6 @@
-# NgTest
+# ng-tweet
+
+## A dummy twitter-like written with [Angular](http://angular.io) and [TypeScript](https://www.typescriptlang.org) 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
