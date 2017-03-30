@@ -1,3 +1,4 @@
+import {C3sMenuModule} from '../c3s-menu/c3s-menu.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './button/button.component';

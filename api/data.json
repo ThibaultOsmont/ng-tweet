@@ -1,0 +1,10 @@
+{
+    "users": [
+        {
+            "id":1,
+            "email": "orsys@laposte.fr",
+            "password": "orsys",
+            "fullname": "Angular La Poste Orsys"
+        }
+    ]
+}

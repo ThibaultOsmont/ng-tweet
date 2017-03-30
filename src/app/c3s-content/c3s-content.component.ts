@@ -1,3 +1,4 @@
+import {ContentService} from '../content.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,7 +11,7 @@ export class C3sContentComponent implements OnInit {
   private cards;
   private inputSearch: string;
 
-  constructor() {
+  constructor(private cs: ContentService) {
     this.cards = [
       {
         legend: 'AA',
