@@ -10,6 +10,9 @@ export class C3sContentComponent implements OnInit {
 
   private cards;
   private inputSearch: string;
+  
+  private users: any;
+  private usersObservable: any;
 
   constructor(private cs: ContentService) {
     this.cards = [
@@ -53,6 +56,12 @@ export class C3sContentComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.cs.getUsers().subscribe(users => {
+      this.users = users;
+      console.log(users);
+    });
+
+    this.usersObservable = this.cs.getUsers();
   }
 
   doCb(event) {

@@ -4,4 +4,14 @@
   <div class="c3s-content row">
     <c3s-card *ngFor="let card of cards | cardThematique:inputSearch" class="col-sm-4" [card]="card" (cardClick)="doCb($event)"></c3s-card>
   </div>
+
+  <code>via le ? >>> </code>
+  <div *ngFor="let user of users">
+    <h4>{{user?.fullname}}</h4>
+  </div>
+
+  <code>via le | async >>></code>
+  <div *ngFor="let user of usersObservable | async">
+    <h4>{{user.fullname}}</h4>
+  </div>
 </main>
