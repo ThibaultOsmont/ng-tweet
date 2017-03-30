@@ -32,4 +32,8 @@ export class ContentService {
     return this.http.get(this.usersApi)
       .map(result => result.json() || []);
   }
+
+  setUser(email = "toto.com", password="titi"): Observable<any> {
+    return this.http.post(this.usersApi, {email, password});
+  }
 }

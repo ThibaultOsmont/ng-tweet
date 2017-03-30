@@ -5,13 +5,21 @@
     <c3s-card *ngFor="let card of cards | cardThematique:inputSearch" class="col-sm-4" [card]="card" (cardClick)="doCb($event)"></c3s-card>
   </div>
 
-  <code>via le ? >>> </code>
-  <div *ngFor="let user of users">
-    <h4>{{user?.fullname}}</h4>
+  <div class="panel panel-default col-sm-4" id="login">
+    <div class="panel-body">
+      <c3s-forms></c3s-forms>
+    </div>
   </div>
 
-  <code>via le | async >>></code>
-  <div *ngFor="let user of usersObservable | async">
-    <h4>{{user.fullname}}</h4>
+  <div class="col-sm-12">
+    <code>via le ? >>> </code>
+    <div *ngFor="let user of users">
+      <h4>{{user?.fullname}}</h4>
+    </div>
+
+    <code>via le | async >>></code>
+    <div *ngFor="let user of usersObservable | async">
+      <h4>{{user.fullname}}</h4>
+    </div>
   </div>
 </main>

@@ -10,13 +10,15 @@ import { BasicUiModule } from "app/basic-ui/basic-ui.module";
 import { C3sMenuModule } from "app/c3s-menu/c3s-menu.module";
 import { C3sContentComponent } from './c3s-content/c3s-content.component';
 import { ContentService } from "app/content.service";
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    C3sContentComponent
+    C3sContentComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
